@@ -90,7 +90,7 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'djangocommysql',
+        'NAME': 'dbdjangomysql',
         'USER': 'root',
         'PASSWORD': 'alunolab',
         'HOST': 'localhost',
