@@ -94,7 +94,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'alunolab',
         'HOST': 'localhost',
-        'PORT': '3306',
+        'PORT': '3303',
     }
 }
 
