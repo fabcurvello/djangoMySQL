@@ -6,8 +6,18 @@
     <title>FALE CONOSCO</title>
 </head>
 <body>
-    <h1>FALE CONOSCO</h1>
+    <div class="container">
+        <h1>Fale Conosco:</h1>
+        {% bootstrap messages %}
 
+        <form action="{% url 'faleconsoco' %}" method="post" class="form" autocomplete="off">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            {% endbuttons %}
+        </form>
+    </div>
     {% bootstrap_javascript %}
 </body>
 </html>
