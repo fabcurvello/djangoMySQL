@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>FALE CONOSCO</title>
+    {% bootstrap_css %}
 </head>
 <body>
     <div class="container">
         <h1>Fale Conosco:</h1>
-        {% bootstrap messages %}
+        {% bootstrap_messages %}
 
-        <form action="{% url 'faleconsoco' %}" method="post" class="form" autocomplete="off">
+        <form action="{% url 'faleconosco' %}" method="post" class="form" autocomplete="off">
             {% csrf_token %}
             {% bootstrap_form form %}
             {% buttons %}
