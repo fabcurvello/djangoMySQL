@@ -19,7 +19,7 @@ def fale_conosco(request):
 
             print(f"\n-- MENSAGEM ENVIADA -- \nNome: {nome} \nE-mail: {email} \nAssunto: {assunto} \nMensagem: {mensagem} \n----------")
             '''
-
+            form.send_mail()
             messages.success(request, 'E-mail enviado com sucesso!')
             form = FaleConoscoForm()
         else:
