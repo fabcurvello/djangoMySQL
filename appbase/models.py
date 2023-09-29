@@ -38,3 +38,16 @@ def produto_pre_save(signal, instance, sender, **kwargs):
 # Antes de salvar um Produto, disparar o método produto_pre_save
 signals.pre_save.connect(produto_pre_save, sender=Produto)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
