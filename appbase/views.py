@@ -33,7 +33,8 @@ def fale_conosco(request):
 
 def produto(request):
     if str(request.method) == 'POST':
-        form = ProdutoModelForm(request.POST, request.FILES) # FILES por conta do uso das imagens, que são arquivos.
+        # FILES por conta do uso das imagens, que são arquivos.
+        form = ProdutoModelForm(request.POST, request.FILES)
         if(form.is_valid()):
             prod = form.save(commit=False) # Provisório
             print(f"Nome: {prod.nome}")
