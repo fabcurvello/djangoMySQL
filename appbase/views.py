@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.shortcuts import render
-from .forms import FaleConoscoForm
+from .forms import FaleConoscoForm, ProdutoModelForm
 
 def index_home(request):
     return render(request, 'index.html')
@@ -32,7 +32,31 @@ def fale_conosco(request):
 
 
 def produto(request):
-    return render(request, 'produto.html')
+    if str(request.method) == 'POST':
+        form = ProdutoModelForm(request.POST, request.FILES) # FILES por conta do uso das imagens, que são arquivos.
+        if(form.is_valid()):
+            prod = form.save(commit=False) # Provisório
+            print(f"Nome: {prod.nome}")
+            print(f"Preço: {prod.preco}")
+            print(f"Estoque: {prod.estoque}")
+            print(f"Imagem: {prod.imagem}")
+
+            messages.success(request, "Produto salvo com sucesso!")
+            form = ProdutoModelForm() # limpar campos do form
+        else:
+            messages.error(request, "Erro ao cadastrar produto!")
+    else:
+        form = ProdutoModelForm()
+
+    context = {
+        "form": form
+    }
+    return render(request, 'produto.html', context)
+
+
+
+
+
 
 
 
