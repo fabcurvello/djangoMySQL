@@ -1,6 +1,8 @@
 from django import forms
 from django.core.mail import EmailMessage
 
+from .models import Produto
+
 
 class FaleConoscoForm(forms.Form):
     nome = forms.CharField(label='Nome', max_length=80)
@@ -26,7 +28,10 @@ class FaleConoscoForm(forms.Form):
         mail.send()
 
 
-
+class ProdutoModelForm(forms.ModelForm):
+    class Meta:
+        model = Produto
+        fields = ['nome', 'preco', 'estoque', 'imagem']
 
 
 
