@@ -1,0 +1,20 @@
+/* efeitos para o link */
+a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* alinhamento centralizado do conteudo
+da div que contém a imagem */
+.modal-body {
+    text-align: center;
+}
+
+/* altura da imagem do modal */
+.img-fluid {
+    height: 300px;
+}
+
+
+
