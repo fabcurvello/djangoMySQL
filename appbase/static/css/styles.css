@@ -5,8 +5,7 @@ a {
     font-weight: bold;
 }
 
-/* alinhamento centralizado do conteudo
-da div que contém a imagem */
+/* alinhamento centralizado do conteudo da div que contém a imagem */
 .modal-body {
     text-align: center;
 }
