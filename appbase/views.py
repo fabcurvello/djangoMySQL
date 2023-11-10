@@ -36,6 +36,7 @@ def fale_conosco(request):
 
 
 def produto(request):
+    print(f"Usuário: {request.user}")
     if str(request.method) == 'POST':
         form = ProdutoModelForm(request.POST, request.FILES) # FILES por conta do uso das imagens, que são arquivos.
         if(form.is_valid()):
